@@ -1,0 +1,11 @@
+.message-container {
+    @include dark-mode($color-blue-200, $color-blue-100, $dark: false);
+    border-radius: 20px;
+    max-height: 85vh;
+    overflow-y: auto;
+    height: 90%;
+    
+    &.dark {
+        @include dark-mode($color-blue-200, $color-blue-100, $dark: true);
+    }
+}

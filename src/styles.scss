@@ -1,0 +1,14 @@
+@import "./Styles/base/reset";
+@import "./Styles/base/typography";
+@import "./Styles/abstracts/variables";
+@import "./Styles/abstracts/mixins";
+@import "./Styles/pages/home";
+
+/* components */
+@import "./Styles/components/message-container";
+@import "./Styles/components/message-input";
+@import "./Styles/components/messages";
+@import "./Styles/components/aside";
+@import "./Styles/components/app";
+@import "./Styles/components/login";
+@import "./Styles/components/modal"

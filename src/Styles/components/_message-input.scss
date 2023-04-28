@@ -1,0 +1,67 @@
+.message-input {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-base;
+
+    form {
+        height: 60%;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        input {
+            width: 90%;
+            background-color: $color-white-100;
+            color: $color-black-100;
+            border: 2px solid $color-red-200;
+            border-radius: 50px;
+            padding-left: 15px;
+            font-size: $font-size-base;
+            font-weight: 600;
+
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+
+            &::placeholder {
+                text-align: left;
+                font-size: $font-size-base;
+            }
+        }
+
+        button {
+            width: 10%;
+            padding: 5px 10px;
+            font-size: $font-size-base;
+            background-color: $color-red-200;
+            color: $color-gray-100;
+            border: none;
+            border-radius: 50px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        form {
+            height: 40px;
+
+            input {
+                width: 75%;
+            }
+
+            button {
+                width: 25%;
+            }
+        }
+    }
+}

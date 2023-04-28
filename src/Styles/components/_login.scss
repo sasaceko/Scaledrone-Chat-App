@@ -1,0 +1,81 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  height: 350px;
+  margin: auto;
+  padding: 40px 0;
+  border: 4px solid $color-black-200;
+  border-radius: 20px;
+  @include dark-mode($color-blue-200, $color-blue-100, $dark: false);
+
+  p {
+    font-size: $font-size-lg;
+  }
+
+  .avatar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      filter: grayscale(100%);
+      margin: 0 5px;
+      transition: all 200ms ease-in-out;
+
+      &:hover, &.active {
+        filter: none;
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  button {
+    padding: 10px 25px;
+    margin-top: 10px;
+    font-size: $font-size-base;
+    background-color: $color-red-200;
+    color: $color-gray-100;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 500ms, box-shadow 500ms;
+    
+    &:hover {
+      box-shadow: 0 1px 11px 0 $color-red-200;
+      transform: scale(1.1);
+    }
+  }
+
+  &.dark {
+      border: 4px solid $color-gray-100;
+      @include dark-mode($color-blue-200, $color-blue-100, $dark: true);
+  }
+
+  h2 {
+    font-size: $font-size-xl;
+      font-weight: 600;
+  }
+
+  .username-input {
+    label {
+      display: block;
+      font-size: $font-size-lg;
+    }
+
+    input {
+      border-radius: 20px;
+      height: 30px;
+      width: 200px;
+      border: none;
+      padding-left: 10px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 20px 0;
+  }
+}

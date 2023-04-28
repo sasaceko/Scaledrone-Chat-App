@@ -1,0 +1,19 @@
+@mixin dark-mode($bg-color-light, $bg-color-dark, $dark: false) {
+    background-color: $bg-color-light;
+    color: $color-black-100;
+
+    @if $dark {
+        background-color: $bg-color-dark;
+        color: $color-gray-100;
+    }
+}
+
+@mixin animatetop($duration) {
+    animation-name: animatetop;
+    animation-duration: $duration;
+    
+    @keyframes animatetop {
+      from { top: -300px; opacity: 0; }
+      to { top: 0; opacity: 1; }
+    }
+  }
