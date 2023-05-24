@@ -21,7 +21,7 @@ function App() {
     if (!member || droneRef.current) {
       return;
     }
-
+    
     const drone = new window.Scaledrone("3jfYv0OClLhDzI2v", {
       data: member
     });
@@ -50,7 +50,11 @@ function App() {
 
     room.on('members', members => {
       setMembersList(members);
-    })
+    });
+
+    room.on("member_join", member => {
+      setMembersList(prevState => [...prevState, member]);
+    });
     
     droneRef.current = drone;
   }, [member]);
